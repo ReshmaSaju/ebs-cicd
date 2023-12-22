@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // You need to change region,access key and secret key of yours
-        AWS_REGION = 'us-east-2'
+        AWS_REGION = 'ap-south-1'
         AWS_ACCESS_KEY_ID = credentials('your-aws-access-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('your-aws-secret-access-key')
         APPLICATION_NAME = 'Nodejs'
@@ -16,7 +16,7 @@ pipeline {
        stage('Checkout') {
             steps {
                 // Change the github repo into your
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Vennilavan12/ebs.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yasminjeelani/ebs-cicd.git']])
             }
         }
 
